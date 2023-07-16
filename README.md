@@ -1,8 +1,8 @@
-# Monitoring Stack
+# Mini Monitoring Stack
 
-Basic setup of Prometheus, Grafana and AlertManager with docker-compose.
+Basic setup of Prometheus and AlertManager with docker-compose configured to send an email when your application is offline.
+All you need to do is edit the variables in email_configs on file alertmanager/alertmanager.yml as well as the targets in scrape_configs on file prometheus/prometheus.yml appropriately.
 
-Source for https://dashdashverbose.medium.com/monitoring-setup-with-docker-compose-part-1-prometheus-3d2c9089ee82
+Optionally, you may also want to change the job name on prometheus/prometheus.yml and prometheus/alert.yml
 
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y1EKYJI)
+Note that if you use Gmails SMTP to try it out as I did, you will have to create and use an app password on your Gmail as nowadays two step verification won't allow you to use your normal password.
